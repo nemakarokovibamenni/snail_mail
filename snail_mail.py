@@ -5,7 +5,6 @@ from tkinter import messagebox
 def validate_email():
     email = email_entry.get()  
 
-    # Initial checks
     length_of_email = len(email)
     number_of_at_characters = email.count("@")
     number_of_dot_characters = email.count(".")
@@ -14,7 +13,6 @@ def validate_email():
     position_of_last_dot = email.rfind(".")
     position_of_first_dot_after_the_at = email.find(".", position_of_at)
 
-    # Error messages
     error_message_no_at = "An email address has to contain a '@' character!"
     error_message_too_many_at = "An email address cannot contain more than one '@' characters!"
     error_message_no_dot = "An email address has to contain at least one '.' character!"
